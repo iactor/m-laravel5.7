@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace'=>'Home'],function(){
+    Route::get('/redis','RedisController@index');
+});
